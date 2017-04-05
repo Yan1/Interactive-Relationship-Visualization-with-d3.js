@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+svg.test {
+    overflow: visible;
+}
+.node {
+    /*stroke: #fff;
+    stroke-width: 4px;*/
+    cursor:pointer;
+}
+.node.active {
+    stroke-opacity: .2;
+    stroke-width: 10px;
+}
+.node.root.active {
+    stroke: #49BAFF;
+}
+.node.person.active {
+    stroke: #FFA74C;
+}
+.node.company.active {
+    stroke: #45DDBA;
+}
+.nodeText {
+    fill: #000;
+    font-family: 'Microsoft YaHei';
+    font-size:12px;
+    cursor:pointer;
+    pointer-events:none;
+}
+.linkText {
+    font-size: 12px;
+    font-family: Microsoft YaHei;
+    font-weight: 700;
+    fill: #000;
+}
+.linkText.opacity {
+    opacity: 0;
+}
+
+path.link.legal {
+    stroke: #2FBC9B;
+}
+marker#legal_maker {
+    fill: #2FBC9B;
+}
+path.link.invest {
+    stroke: #F29C12
+}
+marker#invest_maker {
+    fill: #F29C12
+}
+path.link.others {
+    stroke: #9C59B7
+}
+marker#others_maker {
+    fill: #9C59B7
+}
+path.link.branch {
+    stroke: #7C95BE;
+}
+marker#branch_maker {
+    fill: #7C95BE;
+}
+path.link.merge {
+    stroke: #999999;
+}
+marker#merge_maker {
+    fill: #999999;
+}
+
+path.link {
+    stroke-width: 2;
+}
+path.link.active {
+    stroke-width: 4;
+}
+path.link.opacity {
+    opacity: .2;
+}
+
+/* 筛选框 */
+.filter-container {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 0;
+}
+.filter-list {
+    margin-right: 14px;
+    display: inline-block;
+}
+.filter-box {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: url("../images/check-icon.png");
+}
+.filter-box.chk_legal {
+    background-position-x: 350px;
+}
+.filter-box.chk_legal.active {
+    background-position-x: 374px;
+}
+.filter-box.chk_invest {
+    background-position-x: 302px;
+}
+.filter-box.chk_invest.active {
+    background-position-x: 326px;
+}
+.filter-box.chk_others {
+    background-position-x: 254px;
+}
+.filter-box.chk_others.active {
+    background-position-x: 278px;
+}
+.filter-box.chk_branch {
+    background-position-x: 206px;
+}
+.filter-box.chk_branch.active {
+    background-position-x: 230px;
+}
+/* 图例 */
+.legend-container {
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 0;
+}
+.legend-list {
+    display: inline-block;
+    margin-left: 14px;
+}
+.legend-circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+.legend-circle.leg_main {
+    background: linear-gradient(to top right, #499FFF, #4ACEFF);
+}
+.legend-circle.leg_company {
+    background: linear-gradient(to top right, #3FCDC5, #48E7B5);
+}
+.legend-circle.leg_person {
+    background: linear-gradient(to top right, #FF9751, #FFB04A);
+}
+
+/* 操作 */
+.relation-operation {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+}
+.relation-operation-item {
+    display: block;
+    background: #7C95BE;
+    line-height: 60px;
+    width: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: .6;
+}
+.relation-operation-item:hover {
+    opacity: 1;
+}
